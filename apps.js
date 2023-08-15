@@ -5,7 +5,7 @@ document.getElementById('login-button').addEventListener('click',function () {
     if (getEmailValue.value === "foridul@gmail.com" && getPasswordValue.value === "foridul1234") {
         window.location.href = "./Dasboard/index.html";
     }else{
-        console.log('Not valid User ')
+        alert("Please Give me valid Input");
 
     }
 })

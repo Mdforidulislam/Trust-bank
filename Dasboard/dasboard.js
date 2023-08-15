@@ -60,7 +60,7 @@ document.getElementById("withdraw-button").addEventListener('click',function () 
         
         const withDrawfinalbalence = document.getElementById('total-balence');
         const convertWithdrawbalence = parseFloat(withDrawfinalbalence.innerText);
-        const sumFinalTotal = convertWithdrawbalence - convertWithdraw;
+        const sumFinalTotal = convertWithdrawbalence - convertWithdrawValue;
         withDrawfinalbalence.innerText = sumFinalTotal;
     
     
