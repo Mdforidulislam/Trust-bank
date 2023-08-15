@@ -1,0 +1,89 @@
+<!DOCTYPE html >
+<html lang="en" data-theme="night">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Bank</title>
+    <!-- use others livery or frame work -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    
+   <main class="flex justify-center items-center h-screen">
+    <section class="w-5/6 h-[600px] bg-slate-800 rounded-xl p-6">
+        <!-- header section -->
+        <header class="text-center">
+            <h1 class="text-2xl capitalize text-white ">welcome <span class="text-3xl text-yellow-400">Foridul</span></h1>
+            <h1 class="text-white text-xl pt-4 capitalize">Trust Bank User DashBoard </h1>
+        </header>
+        <!-- userBalence section -->
+        <!-- user Dascboard section -->
+        <div class="user-balence mt-10 flex justify-between">
+          <div class="flex flex-wrap gap-7">
+            <div class=" w-[45%] h-40 bg-slate-700 rounded-lg p-5 shadow-2xl">
+                <h2 class="text-center text-xl capitalize">Your Deposit Balence</h2>
+                <h2 id="deposite-balence" class="text-center pt-5 text-4xl text-white">$<span id="deposite-area" class="pt-10 text-4xl text-white">00</span></h2>
+            </div>
+            <div class="w-[45%] h-40 bg-slate-700 rounded-lg shadow-2xl p-5">
+                <h2 class="text-center text-xl capitalize">Your withdraw Balence</h2>
+                <h2 class="text-center pt-5 text-4xl text-white">$<span id="withdraw-balence-area" class="pt-10 text-4xl text-white">00</span></h2>
+            </div>
+            <div class="user-submite flex pt-6 w-full">
+                <div class=" mr-11 w-[45%]">
+                    <input id="deposit-value" type="text" placeholder="Deposit Your Balence" class="input input-bordered input-success mb-3 mr-4"/> <br>
+                    <button id="deposit-button" class="btn bg-slate-900 hover:bg-slate-950  ">Deposit</button>
+                </div>
+               
+                <div class="w-[48%]">
+                    <input id="withdraw-value" type="text" placeholder="withdraw Your Balence" class="input input-bordered input-success mb-3 mr-4"/> <br>
+                    <button id="withdraw-button" class="btn bg-slate-900 hover:bg-slate-950 ">withdraw</button>
+                </div>
+            </div>
+          </div>
+            <div class="w-[600px] h-[300px] bg-slate-700 rounded-lg shadow-2xl">
+                <h2 class="text-center text-xl capitalize">Total Balence</h2>
+                <h2 class="text-center pt-5 text-4xl text-white">$<span id="total-balence" class="pt-10 text-4xl text-white">1200</span></h2>
+                <div class="p-6 pt-8 flex gap-6">
+                    <div class="w-24 h-24">
+                        <img class="rounded-[70%] h-[100%] shadow-2xl border" src="./image/IMG20230214000710.jpg" alt="">
+                    </div>
+                    <div class="space-y-2">
+                        <h1 class="capitalize text-white text-xl mb-2">ID: 23942324</h1>
+                        <h1 class="capitalize text-white text-sm">User Name: Md Foridul Islam</h1>
+                        <h1 class="capitalize text-white text-sm">Address: Rangpur,pirgonj</h1>
+                        <h1 class="capitalize text-white text-sm">Email: mdforidulislam962@gmail.com</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- userBalence Deposite Section withdraw -->
+
+        
+    </section>
+   </main>
+
+   <section class="flex justify-center">
+    <div class="transation-containet w-5/6 h-auto bg-slate-800 rounded-xl p-6">
+        <div id="transation-area" class="heading-section">
+            <h1 class="text-center capitalize text-2xl">All Transation Notice</h1>
+            
+        </div>
+        <div id="all-transation" class="flex gap-4 mt-5 p-5">
+            <div id="transation-area-list" class="flex-1 bg-slate-700 rounded-xl p-5">
+                <h1 id="transation-list" class="text-center capitalize pb-1">all Transation</h1>
+                <hr>
+            </div>
+            <div id="all-notice" class="flex-1  bg-slate-700 rounded-xl p-5">
+                <h1 class="text-center capitalize pb-1">all Notice Recipt</h1>
+                <hr>
+                <div id="recipt-section" class="mt-6 text-center">
+                    <button id="recipt-button" class="btn bg-slate-900 hover:bg-slate-950">Recipt Transation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+<script src="./dasboard.js"></script>
+</body>
+</html>
