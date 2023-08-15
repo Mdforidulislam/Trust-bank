@@ -42,11 +42,18 @@ document.getElementById('deposit-button').addEventListener('click',function () {
 
 document.getElementById("withdraw-button").addEventListener('click',function () {
 
-    const getMainBalenceCheck = document.getElementById('total-balence');
-    const convetBalence = parseFloat(getMainBalenceCheck.innerText);
-    
-    if (convetBalence <=  0 ) {
-        alert("Your current balence is empty");
+    const getMainBalanceCheck = document.getElementById('total-balence');
+    const convertBalance = parseFloat(getMainBalanceCheck.innerText);
+
+    const getWithdrawValue = document.getElementById('withdraw-value').value;
+    const convertWithdrawValue = parseFloat(getWithdrawValue);
+
+    if (isNaN(convertWithdrawValue) || convertWithdrawValue <= 0) {
+        alert("Please enter a valid withdrawal amount.");
+        return;
+    }
+    if (convertBalance < convertWithdrawValue) {
+        alert("You can't withdraw blance");
     }else{
         const getWithdrawValue = document.getElementById('withdraw-value').value;
         const convertWithdrawValue = parseFloat(getWithdrawValue);
