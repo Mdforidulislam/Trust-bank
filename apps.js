@@ -5,7 +5,11 @@ document.getElementById('login-button').addEventListener('click',function () {
     if (getEmailValue.value === "foridul@gmail.com" && getPasswordValue.value === "foridul1234") {
         window.location.href = "./Dasboard/index.html";
     }else{
-        alert("Please Give me valid Input");
+      document.getElementById('login-button').addEventListener('click',function (params) {
+        
+        const getVAlidation = document.getElementById('modal-validation');
+        getVAlidation.click();
+      })
 
     }
 })

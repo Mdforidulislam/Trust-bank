@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trust Bank</title>
+    <link rel="stylesheet" href="style.css">
     <!-- use others livery or frame work -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
@@ -11,16 +12,16 @@
 <body>
     
    <main class="flex justify-center items-center h-screen">
-    <section class="w-5/6 h-[600px] bg-slate-800 rounded-xl p-6">
+    <section class="w-full md:w-5/6 h-[600px] bg-slate-800 rounded-xl p-6">
         <!-- header section -->
         <header class="text-center">
             <h1 class="text-2xl capitalize text-white ">welcome <span class="text-3xl text-yellow-400">Foridul</span></h1>
-            <h1 class="text-white text-xl pt-4 capitalize">Trust Bank User DashBoard </h1>
+            <h1 class="text-white text-xl pt-4 capitalize">ABD Bank User DashBoard </h1>
         </header>
         <!-- userBalence section -->
         <!-- user Dascboard section -->
-        <div class="user-balence mt-10 flex justify-between">
-          <div class="flex flex-wrap gap-7">
+        <div class="user-balence mt-10 flex justify-between flex-col md:flex-row ">
+          <div class="flex flex-wrap gap-7 row-span-1 md:row-span-1 lg:row-span-2">
             <div class=" w-[45%] h-40 bg-slate-700 rounded-lg p-5 shadow-2xl">
                 <h2 class="text-center text-xl capitalize">Your Deposit Balence</h2>
                 <h2 id="deposite-balence" class="text-center pt-5 text-4xl text-white">$<span id="deposite-area" class="pt-10 text-4xl text-white">00</span></h2>
@@ -44,7 +45,7 @@
             <div class="w-[600px] h-[300px] bg-slate-700 rounded-lg shadow-2xl">
                 <h2 class="text-center text-xl capitalize">Total Balence</h2>
                 <h2 class="text-center pt-5 text-4xl text-white">$<span id="total-balence" class="pt-10 text-4xl text-white">1200</span></h2>
-                <div class="p-6 pt-8 flex gap-6">
+                <div class="p-6 pt-8 flex gap-6 border m-3 rounded-lg mt-5">
                     <div class="w-24 h-24">
                         <img class="rounded-[70%] h-[100%] shadow-2xl border" src="./image/IMG20230214000710.jpg" alt="">
                     </div>
@@ -64,26 +65,59 @@
    </main>
 
    <section class="flex justify-center">
-    <div class="transation-containet w-5/6 h-auto bg-slate-800 rounded-xl p-6">
+    <div class="transation-containet w-full md:w-5/6  h-auto bg-slate-800 rounded-xl p-6">
         <div id="transation-area" class="heading-section">
             <h1 class="text-center capitalize text-2xl">All Transation Notice</h1>
             
         </div>
-        <div id="all-transation" class="flex gap-4 mt-5 p-5">
+        <div id="all-transation" class="grid gap-4 md:grid-cols-2 gap-4 mt-5 p-5">
             <div id="transation-area-list" class="flex-1 bg-slate-700 rounded-xl p-5">
                 <h1 id="transation-list" class="text-center capitalize pb-1">all Transation</h1>
                 <hr>
             </div>
             <div id="all-notice" class="flex-1  bg-slate-700 rounded-xl p-5">
-                <h1 class="text-center capitalize pb-1">all Notice Recipt</h1>
+                <h1 class="text-center capitalize pb-1 overflow-x-auto">all Notice Recipt</h1>
                 <hr>
                 <div id="recipt-section" class="mt-6 text-center">
-                    <button id="recipt-button" class="btn bg-slate-900 hover:bg-slate-950">Recipt Transation</button>
+                    <button id="recipt-button" class="btn bg-slate-900 hover:bg-slate-950 overflow-x-auto">Recipt Transation</button>
                 </div>
             </div>
         </div>
     </div>
    </section>
+
+   <!-- Your existing HTML content -->
+
+<!-- Add a modal for deposit -->
+<!-- Open the modal using ID.showModal() method -->
+<button class="btn hidden" onclick="my_modal_5.showModal()" id="modal-open" ></button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+    <h3 class="font-bold text-lg">Yeap!!</h3>
+    <p id="balence-add-area" class="py-4">Succesfull add  deposite</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Done Deposit</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- add modal for withdraw  -->
+<button class="btn hidden" onclick="my_modal_6.showModal()" id="modal-withdraw-open" ></button>
+<dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+    <h3 class="font-bold text-lg">Yeap!!</h3>
+    <p id="deposite-balence-add-area" class="py-4">Done withdraw Balence</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Done withdraw</button>
+    </div>
+  </form>
+</dialog>
+
+
+
+  
 <script src="./dasboard.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust Bank</title>
+    <title>ABD Bank</title>
     <link rel="stylesheet" href="style.css">
     <!-- use others livery or frame work -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,8 +14,8 @@
    <main class="flex justify-center items-center h-screen">
     <section class="w-6/12 h-96 bg-slate-800 shadow-slate-700 rounded-lg p-8">
         <div class="heading pb-8">
-            <h1 class="text-center text-white text-2xl">Trust <span class="text-cyan-300">Bank</span></h1>
-            <h1 class="text-center text-white pt-6">Welcome by Trust Bank</h1>
+            <h1 class="text-center text-white text-2xl">ABD <span class="text-cyan-300">Bank</span></h1>
+            <h1 class="text-center text-white pt-6">Welcome by ABD Bank</h1>
         </div>
         <div class="form-seciotn text-center">
             <input id="emain-fild" type="email" placeholder="Type here Your Email" class="input input-bordered input-success w-3/4  mb-3" />
@@ -24,6 +24,18 @@
         </div>
     </section>
    </main>
+
+
+   <button class="btn hidden" onclick="my_modal_6.showModal()" id="modal-validation" ></button>
+<dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+    <p class="py-4">Please Provide Valid Info</p>
+    <div class="modal-action">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">close</button>
+      </div>
+  </form>
+</dialog>
 
 <script src="./apps.js"></script>
 </body>
